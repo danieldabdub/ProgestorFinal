@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app>
+
+    <servlet>
+        <servlet-name>CheckLogin</servlet-name>
+        <servlet-class>CheckLogin</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ClientList</servlet-name>
+        <servlet-class>ClientList</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ConnectionUtils</servlet-name>
+        <servlet-class>ConnectionUtils</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>CreateProject</servlet-name>
+        <servlet-class>CreateProject</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Dashboard</servlet-name>
+        <servlet-class>Dashboard</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>EmployeeList</servlet-name>
+        <servlet-class>EmployeeList</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>Logout</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>menu</servlet-name>
+        <servlet-class>menu</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ProjectEdit</servlet-name>
+        <servlet-class>ProjectEdit</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ProjectList</servlet-name>
+        <servlet-class>ProjectList</servlet-class>
+    </servlet>	
+	
+	 <servlet>
+        <servlet-name>ProjectUpdate</servlet-name>
+        <servlet-class>ProjectUpdate</servlet-class>
+    </servlet>	
+
+	 <servlet>
+        <servlet-name>ProjectView</servlet-name>
+        <servlet-class>ProjectView</servlet-class>
+    </servlet>	
+	
+    <servlet>
+        <servlet-name>QualificationList</servlet-name>
+        <servlet-class>QualificationList</servlet-class>
+    </servlet>
+	
+	<servlet>
+        <servlet-name>QualificationView</servlet-name>
+        <servlet-class>QualificationView</servlet-class>
+    </servlet>
+	
+	<servlet>
+        <servlet-name>QualificationEdit</servlet-name>
+        <servlet-class>QualificationEdit</servlet-class>
+    </servlet>
+
+	<servlet>
+        <servlet-name>QualificationUpdate</servlet-name>
+        <servlet-class>QualificationUpdate</servlet-class>
+    </servlet>	
+	
+	<servlet>
+        <servlet-name>EmployeeView</servlet-name>
+        <servlet-class>EmployeeView</servlet-class>
+    </servlet>
+	
+	<servlet>
+        <servlet-name>ClientView</servlet-name>
+        <servlet-class>ClientView</servlet-class>
+    </servlet>
+	
+	<servlet>
+        <servlet-name>EmployeeUpdate</servlet-name>
+        <servlet-class>EmployeeUpdate</servlet-class>
+    </servlet>	
+
+	<servlet>
+        <servlet-name>EmployeeUpdateQualifications</servlet-name>
+        <servlet-class>EmployeeUpdateQualifications</servlet-class>
+    </servlet>		
+
+	<servlet>
+        <servlet-name>EmployeeEdit</servlet-name>
+        <servlet-class>EmployeeEdit</servlet-class>
+    </servlet>	
+
+	<servlet>
+        <servlet-name>ProjectInsert</servlet-name>
+        <servlet-class>ProjectInsert</servlet-class>
+    </servlet>	
+	
+	<servlet>
+        <servlet-name>ManagerData</servlet-name>
+        <servlet-class>ManagerData</servlet-class>
+    </servlet>
+	
+	<servlet>
+        <servlet-name>ProjectNew</servlet-name>
+        <servlet-class>ProjectNew</servlet-class>
+    </servlet>
+	
+	<servlet>
+        <servlet-name>EmployeeProjects</servlet-name>
+        <servlet-class>EmployeeProjects</servlet-class>
+    </servlet>	
+
+	<servlet>
+        <servlet-name>EmployeeCountries</servlet-name>
+        <servlet-class>EmployeeCountries</servlet-class>
+    </servlet>		
+	
+	<servlet>
+        <servlet-name>QualifEmployees</servlet-name>
+        <servlet-class>QualifEmployees</servlet-class>
+    </servlet>	
+
+	<servlet>
+        <servlet-name>ClientProjects</servlet-name>
+        <servlet-class>ClientProjects</servlet-class>
+    </servlet>	
+	
+	<servlet>
+        <servlet-name>CountryEdit</servlet-name>
+        <servlet-class>CountryEdit</servlet-class>
+    </servlet>
+
+	<servlet>
+        <servlet-name>CountryList</servlet-name>
+        <servlet-class>CountryList</servlet-class>
+    </servlet>
+
+	<servlet>
+        <servlet-name>CountryUpdate</servlet-name>
+        <servlet-class>CountryUpdate</servlet-class>
+    </servlet>
+	
+	<servlet>
+        <servlet-name>CountryView</servlet-name>
+        <servlet-class>CountryView</servlet-class>
+    </servlet>	
+
+	<servlet>
+        <servlet-name>ClientEdit</servlet-name>
+        <servlet-class>ClientEdit</servlet-class>
+    </servlet>	
+
+	<servlet>
+        <servlet-name>ClientUpdate</servlet-name>
+        <servlet-class>ClientUpdate</servlet-class>
+    </servlet>	
+	
+	<servlet>
+        <servlet-name>CountryEmployees</servlet-name>
+        <servlet-class>CountryEmployees</servlet-class>
+    </servlet>
+
+	<servlet>
+        <servlet-name>ProjectEmployees</servlet-name>
+        <servlet-class>ProjectEmployees</servlet-class>
+    </servlet>
+
+	<servlet>
+        <servlet-name>EmployeeInsert</servlet-name>
+        <servlet-class>EmployeeInsert</servlet-class>
+    </servlet>	
+	
+	<servlet>
+        <servlet-name>EmployeeNew</servlet-name>
+        <servlet-class>EmployeeNew</servlet-class>
+    </servlet>
+
+	<servlet>
+        <servlet-name>ClientInsert</servlet-name>
+        <servlet-class>ClientInsert</servlet-class>
+    </servlet>
+	
+	<servlet>
+        <servlet-name>ClientNew</servlet-name>
+        <servlet-class>ClientNew</servlet-class>
+    </servlet>	
+	
+    <servlet-mapping>
+        <servlet-name>CheckLogin</servlet-name>
+        <url-pattern>/CheckLogin</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ClientList</servlet-name>
+        <url-pattern>/ClientList</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ConnectionUtils</servlet-name>
+        <url-pattern>/ConnectionUtils</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CreateProject</servlet-name>
+        <url-pattern>/CreateProject</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Dashboard</servlet-name>
+        <url-pattern>/Dashboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>EmployeeList</servlet-name>
+        <url-pattern>/EmployeeList</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>menu</servlet-name>
+        <url-pattern>/menu</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ProjectEdit</servlet-name>
+        <url-pattern>/ProjectEdit</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ProjectList</servlet-name>
+        <url-pattern>/ProjectList</url-pattern>
+    </servlet-mapping>
+	
+	 <servlet-mapping>
+        <servlet-name>ProjectUpdate</servlet-name>
+        <url-pattern>/ProjectUpdate</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>ProjectView</servlet-name>
+        <url-pattern>/ProjectView</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>QualificationList</servlet-name>
+        <url-pattern>/QualificationList</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>QualificationView</servlet-name>
+        <url-pattern>/QualificationView</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>QualificationEdit</servlet-name>
+        <url-pattern>/QualificationEdit</url-pattern>
+    </servlet-mapping>	
+	
+	<servlet-mapping>
+        <servlet-name>QualificationUpdate</servlet-name>
+        <url-pattern>/QualificationUpdate</url-pattern>
+    </servlet-mapping>	
+	
+	<servlet-mapping>
+        <servlet-name>ClientView</servlet-name>
+        <url-pattern>/ClientView</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>EmployeeView</servlet-name>
+        <url-pattern>/EmployeeView</url-pattern>
+    </servlet-mapping>
+
+	<servlet-mapping>
+        <servlet-name>EmployeeUpdate</servlet-name>
+        <url-pattern>/EmployeeUpdate</url-pattern>
+    </servlet-mapping>	
+	
+	<servlet-mapping>
+        <servlet-name>EmployeeUpdateQualifications</servlet-name>
+        <url-pattern>/EmployeeUpdateQualifications</url-pattern>
+    </servlet-mapping>		
+
+	<servlet-mapping>
+        <servlet-name>EmployeeEdit</servlet-name>
+        <url-pattern>/EmployeeEdit</url-pattern>
+    </servlet-mapping>		
+	
+	<servlet-mapping>
+        <servlet-name>ProjectInsert</servlet-name>
+        <url-pattern>/ProjectInsert</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>ManagerData</servlet-name>
+        <url-pattern>/ManagerData</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>ProjectNew</servlet-name>
+        <url-pattern>/ProjectNew</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>EmployeeProjects</servlet-name>
+        <url-pattern>/EmployeeProjects</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>EmployeeCountries</servlet-name>
+        <url-pattern>/EmployeeCountries</url-pattern>
+    </servlet-mapping>		
+		
+	<servlet-mapping>
+        <servlet-name>QualifEmployees</servlet-name>
+        <url-pattern>/QualifEmployees</url-pattern>
+    </servlet-mapping>		
+
+	<servlet-mapping>
+        <servlet-name>ClientProjects</servlet-name>
+        <url-pattern>/ClientProjects</url-pattern>
+    </servlet-mapping>
+
+	<servlet-mapping>
+        <servlet-name>CountryEdit</servlet-name>
+        <url-pattern>/CountryEdit</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>CountryList</servlet-name>
+        <url-pattern>/CountryList</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>CountryUpdate</servlet-name>
+        <url-pattern>/CountryUpdate</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>CountryView</servlet-name>
+        <url-pattern>/CountryView</url-pattern>
+    </servlet-mapping>
+
+	<servlet-mapping>
+        <servlet-name>ClientEdit</servlet-name>
+        <url-pattern>/ClientEdit</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>ClientUpdate</servlet-name>
+        <url-pattern>/ClientUpdate</url-pattern>
+    </servlet-mapping>
+		
+	<servlet-mapping>
+        <servlet-name>CountryEmployees</servlet-name>
+        <url-pattern>/CountryEmployees</url-pattern>
+    </servlet-mapping>
+
+	<servlet-mapping>
+        <servlet-name>ProjectEmployees</servlet-name>
+        <url-pattern>/ProjectEmployees</url-pattern>
+    </servlet-mapping>	
+
+	<servlet-mapping>
+        <servlet-name>EmployeeInsert</servlet-name>
+        <url-pattern>/EmployeeInsert</url-pattern>
+    </servlet-mapping>	
+
+	<servlet-mapping>
+        <servlet-name>EmployeeNew</servlet-name>
+        <url-pattern>/EmployeeNew</url-pattern>
+    </servlet-mapping>	
+
+	<servlet-mapping>
+        <servlet-name>ClientInsert</servlet-name>
+        <url-pattern>/ClientInsert</url-pattern>
+    </servlet-mapping>
+
+	<servlet-mapping>
+        <servlet-name>ClientNew</servlet-name>
+        <url-pattern>/ClientNew</url-pattern>
+    </servlet-mapping>
+	
+</web-app>
