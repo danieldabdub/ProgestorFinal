@@ -20,7 +20,12 @@ public class ProjectList extends HttpServlet {
 		toClient.println("<table class='Table1'>");
 		toClient.println("<thead>");
 		toClient.println("<tr>");
-		toClient.println("<th>ProjectID</th>");
+		
+		int x;
+		
+		x = ProjectData.getNumberOfActiveProjects(connection);
+		
+		toClient.println("<th>" + x +"</th>");
 		toClient.println("<th>Client</th>");
 		toClient.println("<th>Project Manager</th>");
 		toClient.println("<th>Status</th>");

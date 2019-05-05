@@ -29,6 +29,7 @@ public class ProjectData{
     int dueMonth;
 	String clientId;
 	String managerId;
+	int daysDelayed;
     
     
     // Primer Constructor: - getProjectList
@@ -109,6 +110,12 @@ public class ProjectData{
 		this.countryName=countryName;
 		}
      
+	 ProjectData (String projectId, int daysDelayed){
+        
+        this.projectId = projectId;
+		this.daysDelayed = daysDelayed;
+    
+    }
     
     
     
@@ -146,7 +153,7 @@ public class ProjectData{
         return vec;
     }
    
-     public static Vector<ProjectData> getActiveProjectList(Connection connection){
+    public static Vector<ProjectData> getActiveProjectList(Connection connection){
         
         Vector<ProjectData> vec = new Vector<ProjectData>();
         
@@ -178,7 +185,124 @@ public class ProjectData{
         }
         return vec;
     }
-     
+	
+	public static Vector<ProjectData> getDelayedProjectList(Connection connection){
+        
+        Vector<ProjectData> vec = new Vector<ProjectData>();
+        
+        String sql = "SELECT projectId, DATEDIFF('d',dueDate,now()) as daysDelayed FROM Projects WHERE dueDate<NOW() AND status = 'In Progress';";
+        
+        System.out.println("getDelayedProjectList: " + sql);
+        
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet result = statement.executeQuery(sql);
+            
+            while(result.next()) {
+                
+                // CAMBIAR! SEGUN LAS BD
+                
+                ProjectData project = new ProjectData(
+                    result.getString("projectId"),
+                    Integer.parseInt(result.getString("daysDelayed"))
+                );
+                
+                vec.addElement(project);
+            }
+            
+        } catch(SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error in getActiveProjectList: " + sql + " Exception: " + e);
+        }
+        return vec;
+    }
+	
+	public static int getNumberOfActiveProjects(Connection connection){
+        
+        int numProjects=0;
+        
+        String sql = "SELECT Count(*) as numProjects FROM Projects WHERE status='In Progress';";
+        
+        System.out.println("getNumberOfActiveProjectList: " + sql);
+        
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet result = statement.executeQuery(sql);
+            
+            while(result.next()) {
+                
+                // CAMBIAR! SEGUN LAS BD
+                
+                int x = Integer.parseInt(result.getString("numProjects"));
+                
+                numProjects = x;
+            }
+            
+        } catch(SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error in getNumberOfActiveProjectList: " + sql + " Exception: " + e);
+        }
+        return numProjects;
+    }
+	
+	public static int getNumberOfFinishedProjects(Connection connection){
+        
+        int numProjects=0;
+        
+        String sql = "SELECT Count(*) as numProjects FROM Projects WHERE status='Finished';";
+        
+        System.out.println("getNumberOfFinishedProjects: " + sql);
+        
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet result = statement.executeQuery(sql);
+            
+            while(result.next()) {
+                
+                // CAMBIAR! SEGUN LAS BD
+                
+                int x = Integer.parseInt(result.getString("numProjects"));
+                
+                numProjects = x;
+            }
+            
+        } catch(SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error in getNumberOfFinishedProjects: " + sql + " Exception: " + e);
+        }
+        return numProjects;
+    }
+	
+	// SELECT Count(*) as numProjects FROM Projects WHERE dueDate<NOW()
+    
+	public static int getNumberOfDelayedProjects(Connection connection){
+        
+        int numProjects=0;
+        
+        String sql = "SELECT Count(*) as numProjects FROM Projects WHERE dueDate<NOW() AND status = 'In Progress';";
+        
+        System.out.println("getNumberOfDelayedProjects: " + sql);
+        
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet result = statement.executeQuery(sql);
+            
+            while(result.next()) {
+                
+                // CAMBIAR! SEGUN LAS BD
+                
+                int x = Integer.parseInt(result.getString("numProjects"));
+                
+                numProjects = x;
+            }
+            
+        } catch(SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error in getNumberOfDelayedProjects: " + sql + " Exception: " + e);
+        }
+        return numProjects;
+    }
+		
     // Ojo: cuando este listo Clients hacerlo.
     
 //    public static Vector<ProjectData> getClientProjectList(Connection connection, String clientId){

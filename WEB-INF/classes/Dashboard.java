@@ -49,9 +49,9 @@ public class Dashboard extends HttpServlet {
             // OJO CON EL CLIENT ID! y OJO! Aqui tuviera que hacer otro constructor!
             // Seria interesante cambiar de color!
             
-                toClient.println("<div class='gantt__row'>");
+                toClient.println("<div class='gantt__row' onclick=\"location.href='/kpiPlaza/ProjectView?id="+ project.projectId +"';\">");
             
-                toClient.println("<div class=gantt__row-first'>" + project.companyName);
+                toClient.println("<div class='gantt__row-first'>" + project.companyName);
             
                 toClient.println("</div>");
                 toClient.println("<ul class='gantt__row-bars'>");
@@ -61,8 +61,10 @@ public class Dashboard extends HttpServlet {
         }
 
         toClient.println("</div>");
+		
+		toClient.println("<br>");
         
-        toClient.println(Utils.footer());
+        toClient.println(Utils.footerD());
         toClient.close();
     }
 }

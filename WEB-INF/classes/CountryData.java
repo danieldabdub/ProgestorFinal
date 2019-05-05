@@ -13,6 +13,7 @@ public class CountryData{
     String countryName;
 	int processingTime;
 	int validityTime;
+	int numProjects;
     
     // Primer Constructor: - getQualificationList
     //                     - getQualification
@@ -21,6 +22,11 @@ public class CountryData{
         this.countryName = countryName;
 		this.processingTime = processingTime;
 		this.validityTime = validityTime;
+    }
+	
+	CountryData (String countryName, int numProjects){
+        this.countryName = countryName;
+		this.numProjects = numProjects;
     }
     
     CountryData (String countryName){
@@ -57,6 +63,35 @@ public class CountryData{
         return vec;
     }
     
+	public static Vector<CountryData> getNumberOfProjectsCountry(Connection connection){
+        
+        Vector<CountryData> vec = new Vector<CountryData>();
+        
+        String sql = "SELECT countryName, numProjects FROM (SELECT countryName, Count(*) as numProjects FROM Projects group by countryName) Order BY numProjects DESC;";
+        System.out.println("getNumberOfProjectsCountry: " + sql);
+        
+        try {
+            
+            Statement statement=connection.createStatement();
+            ResultSet result = statement.executeQuery(sql);
+            
+            while(result.next()) {
+
+                
+                CountryData country = new CountryData(
+                    result.getString("countryName"),
+                    Integer.parseInt(result.getString("numProjects"))
+                );
+                
+                vec.addElement(country);
+            }
+            
+        } catch(SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error in getCountryList: " + sql + " Exception: " + e);
+        }
+        return vec;
+    }
     
     public static Vector<CountryData> getEmployeeCountryList(Connection connection, String employeeId){
         Vector<CountryData> vec = new Vector<CountryData>();

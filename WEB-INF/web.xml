@@ -199,7 +199,12 @@
 	<servlet>
         <servlet-name>ClientNew</servlet-name>
         <servlet-class>ClientNew</servlet-class>
-    </servlet>	
+    </servlet>
+
+	<servlet>
+        <servlet-name>kpi</servlet-name>
+        <servlet-class>kpi</servlet-class>
+    </servlet>
 	
     <servlet-mapping>
         <servlet-name>CheckLogin</servlet-name>
@@ -399,6 +404,11 @@
 	<servlet-mapping>
         <servlet-name>ClientNew</servlet-name>
         <url-pattern>/ClientNew</url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+        <servlet-name>kpi</servlet-name>
+        <url-pattern>/kpi</url-pattern>
     </servlet-mapping>
 	
 </web-app>

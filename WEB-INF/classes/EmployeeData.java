@@ -46,7 +46,62 @@ public class EmployeeData{
         this.lastName = lastName;
     }
 	
+	public static int getNumberAssignedEmployees(Connection connection){
+        
+        int numEmployees=0;
+        
+        String sql = "SELECT Count(*) as numEmployee FROM (SELECT DISTINCT employeeId FROM ProjectEmployee);";
+        
+        System.out.println("getNumberAssignedEmployees: " + sql);
+        
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet result = statement.executeQuery(sql);
+            
+            while(result.next()) {
+                
+                // CAMBIAR! SEGUN LAS BD
+                
+                int x = Integer.parseInt(result.getString("numEmployee"));
+                
+                numEmployees = x;
+            }
+            
+        } catch(SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error in getNumberAssignedEmployees: " + sql + " Exception: " + e);
+        }
+        return numEmployees;
+    }
     
+	public static int getNumberEmployees(Connection connection){
+        
+        int numEmployees=0;
+        
+        String sql = "SELECT Count(*) as numEmployee FROM Employees;";
+        
+        System.out.println("getNumberEmployees: " + sql);
+        
+        try {
+            Statement statement=connection.createStatement();
+            ResultSet result = statement.executeQuery(sql);
+            
+            while(result.next()) {
+                
+                // CAMBIAR! SEGUN LAS BD
+                
+                int x = Integer.parseInt(result.getString("numEmployee"));
+                
+                numEmployees = x;
+            }
+            
+        } catch(SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error in getNumberEmployees: " + sql + " Exception: " + e);
+        }
+        return numEmployees;
+    }
+	
     public static Vector<EmployeeData> getEmployeeList(Connection connection){
         
         Vector<EmployeeData> vec = new Vector<EmployeeData>();
